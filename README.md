@@ -35,8 +35,8 @@ This container should be started first, since your backend depends on it.
 Why? .env files define the URLs and settings each part of your app uses. If they are incorrect, the components won’t connect properly.
 
 
-⚠️ Note: Missing .env Files
-***If you do not see a .env file in the following directories:
+**⚠️ Note: Missing .env Files
+If you do not see a .env file in the following directories:
 
 backend/
 
@@ -54,7 +54,7 @@ MONGO_PASSWORD=your_mongo_password_if_any
 🔧 Frontend .env file should contain:
 
 VITE_API_URL=http://backend-container-name:5000
-💡 Replace container names and credentials based on your setup.***
+💡 Replace container names and credentials based on your setup.**
 
 🔧 Backend .env Location: backend/.env
 
