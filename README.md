@@ -34,28 +34,6 @@ This container should be started first, since your backend depends on it.
 
 Why? .env files define the URLs and settings each part of your app uses. If they are incorrect, the components won’t connect properly.
 
-
-**⚠️ Note: Missing .env Files
-If you do not see a .env file in the following directories:
-
-backend/
-
-frontend/
-
-You must create them manually before running the application.
-
-🔧 Backend .env file should contain:
-
-DB_NAME=your_database_name
-DB_HOST=mongo-container-name
-DB_PORT=27017
-MONGO_USERNAME=your_mongo_user_if_any
-MONGO_PASSWORD=your_mongo_password_if_any
-🔧 Frontend .env file should contain:
-
-VITE_API_URL=http://backend-container-name:5000
-💡 Replace container names and credentials based on your setup.**
-
 🔧 Backend .env Location: backend/.env
 
 Update the MongoDB connection string and backend port, like:
@@ -111,6 +89,30 @@ Frontend talks to backend
 Backend talks to MongoDB
 
 🔄 Summary Component What to do MongoDB Run first, standalone container Flask Build and run after MongoDB is ready React Build and run after backend is running .env files Update for both backend and frontend
+
+
+
+
+⚠️ Note: Missing .env Files
+If you do not see a .env file in the following directories:
+
+backend/
+
+frontend/
+
+You must create them manually before running the application.
+
+🔧 Backend .env file should contain:
+
+DB_NAME=your_database_name
+DB_HOST=mongo-container-name
+DB_PORT=27017
+MONGO_USERNAME=your_mongo_user_if_any
+MONGO_PASSWORD=your_mongo_password_if_any
+🔧 Frontend .env file should contain:
+
+VITE_API_URL=http://backend-container-name:5000
+💡 Replace container names and credentials based on your setup
 
 
 
